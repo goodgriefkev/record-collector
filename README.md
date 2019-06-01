@@ -3,7 +3,9 @@
 SEIR Project Two
 
 Full CRUD app using Node.js, Mongoose, Express, and EJS.  
-Allows user to catalog a record collection.
+Problem: User has lots of music on physical mediums.  
+App purpose: Allows user to catalogue albums.  
+Ideal user: Music collectors.  
 
 # Wireframes
 ![login/signup wireframe](/images/logIn_wireframe.JPG)
