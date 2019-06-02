@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/goodgriefkev/record-collector/issues"
   },
-  "homepage": "https://github.com/goodgriefkev/record-collector#readme"
+  "homepage": "https://github.com/goodgriefkev/record-collector#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1"
+  }
 }
