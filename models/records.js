@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const albumSchema = new mongoose.Schema({
+const recordSchema = new mongoose.Schema({
   title: {type:String, required:true},
   artist: {type:String, required:true},
   year: Number,
@@ -8,6 +8,6 @@ const albumSchema = new mongoose.Schema({
   description: String
 });
 
-const Album = mongoose.model('Album', albumSchema)
+const Record = mongoose.model('Record', recordSchema)
 
-module.exports = Album 
+module.exports = Record

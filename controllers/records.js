@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Album = require('../models/albums.js');
+const Record = require('../models/records.js');
 
 //INDEX
 router.get('/', (req, res) => {
