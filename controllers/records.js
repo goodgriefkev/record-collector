@@ -4,7 +4,8 @@ const Record = require('../models/records.js');
 
 //INDEX
 router.get('/', (req, res) => {
-  res.send('index');
+  // res.send('index');
+  res.render('index.ejs');
 });
 
 module.exports = router;
