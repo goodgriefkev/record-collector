@@ -8,4 +8,10 @@ router.get('/', (req, res) => {
   res.render('index.ejs');
 });
 
+//NEW
+router.get('/new', (req, res) => {
+  // res.send('new route');
+  
+});
+
 module.exports = router;
