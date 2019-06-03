@@ -11,6 +11,21 @@
       <div class="">
         <a class="" href="/records/new">Add a Record</a>
       </div>
+      <div class="">
+        <% for(let i=0; i<records.length; i++) { %>
+          <div class="">
+            <img
+              src="<%=records[i].img%>"
+              alt="image of <%=records[i].artist%>'s <i><%=records[i].title%></i>"/>
+          </div>
+          <div class="">
+            <a class="" href="/records/<%=records[i].id%>">
+              <%=records[i].artist%> - <br/>
+              <%=records[i].title%>
+            </a>
+          </div>
+        <% } %>
+      </div>
     </div>
   </body>
 </html>

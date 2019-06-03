@@ -5,7 +5,15 @@ const Record = require('../models/records.js');
 //INDEX
 router.get('/', (req, res) => {
   // res.send('index');
-  res.render('index.ejs');
+  Record.find({}, (err, allRecords) => {
+    if(err) {
+      res.send('Error displaying records')
+    } else {
+      res.render('index.ejs', {
+        records: allRecords
+      });
+    }
+  })
 });
 
 //NEW
@@ -21,7 +29,8 @@ router.post('/', (req, res) => {
       res.send('Record not created');
     } else {
       console.log(createdRecord);
-      res.send(createdRecord);
+      // res.send(createdRecord);
+      res.redirect('/records');
     }
   })
 });
