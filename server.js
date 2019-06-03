@@ -13,6 +13,7 @@ mongoose.connection.once('open', () => {
 });
 
 app.use(express.urlencoded({extended:false}));
+app.use(express.static('public'));
 app.use('/records', recordsController);
 
 app.listen(port, () => {
