@@ -4,6 +4,20 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <h1>Add an Record</h1>
+    <div class="">
+      <div class="">
+        <h1>Add an Record</h1>
+      </div>
+      <div class="">
+        <form class="" action="/records" method="POST">
+          <input type="text" name="title" value="Title">
+          <input type="text" name="artist" value="Artist">
+          <input type="number" name="year" value="Year">
+          <input type="text" name="format" value="Format">
+          <input type="textarea" name="description" value="Description">
+          <input type="text" name="img" value="Link to cover art">
+        </form>
+      </div>
+    </div>
   </body>
 </html>
