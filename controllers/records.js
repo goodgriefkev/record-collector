@@ -11,7 +11,19 @@ router.get('/', (req, res) => {
 //NEW
 router.get('/new', (req, res) => {
   // res.send('new route');
-  
+  res.render('new.ejs');
+});
+
+//CREATE
+router.post('/', (req, res) => {
+  Record.create(req.body, (err, createdRecord) => {
+    if (err) {
+      res.send('Record not created');
+    } else {
+      console.log(createdRecord);
+      res.send(createdRecord);
+    }
+  })
 });
 
 module.exports = router;
