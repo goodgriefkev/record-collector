@@ -5,7 +5,8 @@ const recordSchema = new mongoose.Schema({
   artist: {type:String, required:true},
   year: Number,
   format: String,
-  description: String
+  description: String,
+  img: String
 });
 
 const Record = mongoose.model('Record', recordSchema)
