@@ -35,4 +35,11 @@ router.post('/', (req, res) => {
   })
 });
 
+//SHOW
+router.get('/:id', (req, res) => {
+  Record.findById(req.params.id, (err, foundRecord) => {
+    res.send(foundRecord);
+  })
+});
+
 module.exports = router;
