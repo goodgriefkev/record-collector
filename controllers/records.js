@@ -64,4 +64,11 @@ router.put('/:id', (req, res) => {
   })
 });
 
+//DESTROY
+router.delete('/:id', (req, res) => {
+  Record.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect('/records');
+  })
+});
+
 module.exports = router;
