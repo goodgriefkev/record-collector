@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="">
+      <img src="<%=record.img%>" alt="image of <%=record.artist%>'s <i><%=record.title%></i>"
+    </div>
+    <div class="">
+      Edit <%=record.title%>
+    </div>
+    <div class="">
+      <form class="" action="/records" method="POST">
+        <input
+          type="text"
+          name="title"
+          placeholder="Title"
+          value="<%=record.title%>"/>
+          <br/>
+        <input
+          type="text"
+          name="artist"
+          placeholder="Artist"
+          value="<%=record.artist%>"/>
+          <br/>
+        <input
+          type="number"
+          name="year"
+          placeholder="Year"
+          value="<%=record.year%>"/>
+          <br/>
+        <input
+          type="text"
+          name="format"
+          placeholder="Format"
+          value="<%=record.format%>"/>
+          <br/>
+        <input
+          type="textarea"
+          name="description"
+          placeholder="Description"
+          value="<%=record.description%>"/>
+          <br/>
+        <input
+          type="text"
+          name="img"
+          placeholder="Link to cover art"
+          value="<%=record.img%>"/>
+          <br/>
+        <br/>
+        <input type="submit">
+    </div>
+  </body>
+</html>

@@ -48,7 +48,10 @@ router.get('/:id', (req, res) => {
 //EDIT
 router.get('/:id/edit', (req, res) => {
   Record.findById(req.params.id, (err, foundRecord) => {
-    res.send('this is the edit page');
+    // res.send('this is the edit page');
+    res.render('edit.ejs', {
+      record: foundRecord
+    })
   })
 });
 
