@@ -55,4 +55,13 @@ router.get('/:id/edit', (req, res) => {
   })
 });
 
+//UPDATE
+router.put('/:id', (req, res) => {
+  Record.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedRecord) => {
+    res.render('show.ejs', {
+      record: updatedRecord
+    })
+  })
+});
+
 module.exports = router;

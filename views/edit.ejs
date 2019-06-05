@@ -11,7 +11,7 @@
       Edit <%=record.title%>
     </div>
     <div class="">
-      <form class="" action="/records" method="POST">
+      <form class="" action="/records/<%=record.id%>?_method=PUT" method="POST">
         <input
           type="text"
           name="title"
