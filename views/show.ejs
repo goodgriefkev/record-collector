@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <div class="">
+      <div class="">
+        <a href="/records">Back to Collection</a>
+        <br/>
+        <br/>
+      </div>
+      <div class="">
+        <img src="<%=record.img%>" alt="image of <%=record.artist%>'s <i><%=record.title%></i>"
+      </div>
+      <div class="">
+        <h2>Title: <%=record.title%></h2>
+        <h2>Artist: <%=record.artist%></h2>
+        <h3>Year: <%=record.year%></h3>
+        <h3>Format: <%=record.format%></h3>
+        <h3>Description: <%=record.description%></h3>
+      </div>
+    </div>
+  </body>
+</html>
