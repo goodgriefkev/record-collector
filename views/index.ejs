@@ -4,25 +4,28 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <div class="">
+    <div class="container">
       <% include ./partials/header.ejs %>
-      <div class="">
+      <div class="center-align">
         <a class="" href="/records/new">Add a Record</a>
       </div>
-      <div class="">
+      <div class="row">
         <% for(let i=0; i<records.length; i++) { %>
-          <div class="">
-            <img
-              src="<%=records[i].img%>"
-              alt="image of <%=records[i].artist%>'s <i><%=records[i].title%></i>"/>
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="<%=records[i].img%>"
+                  alt="image of <%=records[i].artist%>'s <i><%=records[i].title%></i>"/>
+              </div>
+              <div class="card-content">
+                <a class="" href="/records/<%=records[i].id%>">
+                  <%=records[i].artist%> - <br/>
+                  <%=records[i].title%>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="">
-            <a class="" href="/records/<%=records[i].id%>">
-              <%=records[i].artist%> - <br/>
-              <%=records[i].title%>
-            </a>
-          </div>
-          <br/>
         <% } %>
       </div>
     </div>
