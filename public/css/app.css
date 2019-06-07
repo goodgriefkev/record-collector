@@ -32,7 +32,28 @@ img {
   }
 } */
 
-@media (min-width: 400px) {
+@media (max-width: 1080px) {
+  .card {
+    height: 250px;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 66px;
+  }
+  #addButton {
+    margin-bottom: 10px;
+  }
+  .card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 415px) {
+  h1 {
+    font-size: 38px;
+  }
   .card {
     height: 440px;
   }
