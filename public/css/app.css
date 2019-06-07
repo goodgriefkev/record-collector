@@ -7,7 +7,7 @@ img {
 }
 
 .card {
-  height: 370px;
+  height: 365px;
 }
 
 #addButton {
@@ -38,6 +38,12 @@ img {
   }
   .card {
     height: 310px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .card {
+    height: 295px;
   }
 }
 
