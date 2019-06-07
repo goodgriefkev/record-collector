@@ -1,21 +1,58 @@
+h1 {
+  font-family: 'Roboto Mono', monospace;
+}
+
 img {
-  max-width: 500px;
+  max-width: 350px;
 }
 
 .card {
-  /* height: 400px; */
+  height: 370px;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
 
 }
 
 @media (min-width: 600px) {
 
-}
+} */
 
-@media (max-width: 300px) {
+/* @media (max-width: 600px) {
+  h1 {
+    font-size: 34px;
+  }
   .card {
     height: 410px;
+  }
+} */
+
+@media (min-width: 400px) {
+  .card {
+    height: 440px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 34px;
+  }
+  .card {
+    height: 410px;
+  }
+}
+
+@media (max-width: 370px) {
+  h1 {
+    font-size: 26px;
+  }
+  .card {
+    height: 390px;
+  }
+}
+
+@media (max-width: 330px) {
+  .card {
+    height: 360px;
   }
 }
