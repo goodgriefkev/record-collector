@@ -6,8 +6,8 @@
   <body>
     <div class="container">
       <% include ./partials/header.ejs %>
-      <div class="center-align">
-        <a class="" href="/records/new">Add a Record</a>
+      <div id="addButton" class="center-align">
+        <a class="btn-flat waves-effect" href="/records/new">Add a Record</a>
       </div>
       <div class="row">
         <% for(let i=0; i<records.length; i++) { %>

@@ -10,6 +10,11 @@ img {
   height: 370px;
 }
 
+#addButton {
+  margin-top: -20px;
+  /* margin-bottom: 10px; */
+}
+
 /* @media (min-width: 992px) {
 
 }
@@ -52,6 +57,9 @@ img {
 }
 
 @media (max-width: 330px) {
+  h1 {
+    font-size: 28px;
+  }
   .card {
     height: 360px;
   }
