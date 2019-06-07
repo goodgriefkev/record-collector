@@ -32,7 +32,22 @@ img {
   }
 } */
 
+@media (max-width: 1400px) {
+  #addButton {
+    margin-bottom: 10px;
+  }
+  .card {
+    height: 310px;
+  }
+}
+
 @media (max-width: 1080px) {
+  h1 {
+    font-size: 74px;
+  }
+  #addButton {
+    margin-bottom: 10px;
+  }
   .card {
     height: 250px;
   }
