@@ -5,16 +5,21 @@ const Record = require('../models/records.js');
 //INDEX
 router.get('/', (req, res) => {
   // res.send('index');
-  Record.find({}, (err, allRecords) => {
-    if(err) {
-      res.send('Error displaying records')
-    } else {
-      res.render('index.ejs', {
-        records: allRecords,
-        currentUser: req.session.currentUser
-      });
-    }
-  })
+  if(req.session.currentUser){
+    Record.find({}, (err, allRecords) => {
+      if(err) {
+        res.send('Error displaying records')
+      } else {
+        res.render('index.ejs', {
+          records: allRecords,
+          currentUser: req.session.currentUser
+        });
+      }
+    })
+  } else {
+    // res.send('please log in');
+    res.render('landing.ejs');
+  }
 });
 
 //NEW
