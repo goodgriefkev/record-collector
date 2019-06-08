@@ -7,6 +7,15 @@
     <div class="container">
       <div id="header">
         <% include ./partials/header.ejs %>
+        <div class="">
+          <h6>
+            <% if(currentUser) { %>
+                Logged in as <%=currentUser.username%>
+              <% } else { %>
+                not logged in
+            <% } %>
+          </h6>
+        </div>
         <div id="addButton" class="center-align">
           <a class="btn-flat waves-effect" href="/records/new"><i class="material-icons left">add_box</i>Add a Record</a>
         </div>

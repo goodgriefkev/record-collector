@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
       res.send('Error displaying records')
     } else {
       res.render('index.ejs', {
-        records: allRecords
+        records: allRecords,
+        currentUser: req.session.currentUser
       });
     }
   })
