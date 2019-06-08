@@ -3,9 +3,9 @@
 SEIR Project Two
 
 Full CRUD app using Node.js, Mongoose, Express, and EJS.  
-Problem: User has lots of music on physical mediums.  
-App purpose: Allows user to catalogue albums.  
-Ideal user: Music collectors.  
+Problem: User collects music on physical mediums.  
+App purpose: Allows user to catalogue those items.  
+Ideal user: Humans who collect physical artifacts containing music.  
 
 # Wireframes
 ![login/signup wireframe](/images/logIn_wireframe.JPG)
@@ -19,7 +19,8 @@ Materialize
 Node.js  
 Mongoose  
 Express  
-EJS  
+EJS
+bcrypt
 
 # Requirements
 Tested on Chrome 74  
@@ -28,6 +29,8 @@ Tested on Chrome 74
 [Record Collector](https://dead-format.herokuapp.com)
 
 # Future Updates
+additional UI / styling
+additional database for cataloging record stores
 mobile optimization
 
 # Author
