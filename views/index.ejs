@@ -5,13 +5,13 @@
   </head>
   <body>
     <div class="container">
-      <div class="">
+      <div id="header">
         <% include ./partials/header.ejs %>
         <div id="addButton" class="center-align">
-          <a class="btn-flat waves-effect" href="/records/new">Add a Record</a>
+          <a class="btn-flat waves-effect" href="/records/new"><i class="material-icons left">add_box</i>Add a Record</a>
         </div>
       </div>
-      <div class="row">
+      <div id="main" class="row">
         <% for(let i=0; i<records.length; i++) { %>
           <div class="col s12 m6 l3 xl3">
             <a href="/records/<%=records[i].id%>">
