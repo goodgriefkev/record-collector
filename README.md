@@ -19,8 +19,8 @@ Materialize
 Node.js  
 Mongoose  
 Express  
-EJS
-bcrypt
+EJS  
+bcrypt  
 
 # Requirements
 Tested on Chrome 74  
