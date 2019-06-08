@@ -21,16 +21,18 @@
             <li>Format: <%=record.format%></li>
             <li>Description: <%=record.description%></li>
           </ul>
-          <!-- <form action="/records/<%=record.id%>/edit">
-            <input type="submit" value="EDIT">
-          </form> -->
-          <a class="btn-small" href="/records/<%=record.id%>/edit">
-            <i class="material-icons left">edit</i>EDIT</a>
-          <form action="/records/<%=record.id%>?_method=DELETE" method="POST"  class="btn-small">
-            <input type="submit" value="DELETE">
-            <i class="material-icons left">delete-forever</i>
-            <!-- <button class="btn-small"><i class="material-icons left">delete-forever</i>DELETE</button> -->
-          </form>
+          <div class="">
+            <a class="btn-small grey darken-1" href="/records/<%=record.id%>/edit">
+              <i class="material-icons left">edit</i>EDIT</a>
+            <br/>
+            <br/>
+            <form action="/records/<%=record.id%>?_method=DELETE" method="POST"  >
+              <button class="btn-small grey darken-1" type="submit" name="button">
+                <i class="material-icons left">delete_forever</i>
+                DELETE
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
