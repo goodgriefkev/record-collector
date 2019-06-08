@@ -1,4 +1,5 @@
 const express = require('express');
+const bcrypt = require('bcrypt');
 const router = express.Router();
 const User = require('../models/users.js')
 
@@ -10,7 +11,7 @@ router.post('/', (req, res) => {
   User.findOne(
     {username: req.body.username},
     (err, foundUser) => {
-      if(req.body.password == foundUser.password) {
+      if(bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentUser = foundUser;
         res.redirect('/records');
         // res.send('signed in');
@@ -22,7 +23,7 @@ router.post('/', (req, res) => {
 
 router.delete('/', (req, res) => {
   req.session.destroy(() => {
-    res.redirect('/');
+    res.render('sessions/new.ejs');
   })
 });
 
