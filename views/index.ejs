@@ -7,7 +7,7 @@
     <div class="container">
       <div id="header">
         <% include ./partials/header.ejs %>
-        <div class="">
+        <div class="usernameDisplay">
           <h6>
             <% if(currentUser) { %>
                 Logged in as <%=currentUser.username%>
@@ -15,6 +15,13 @@
                 not logged in
             <% } %>
           </h6>
+        </div>
+        <div class="logOutButton">
+          <% if(currentUser) { %>
+            <form class="" action="sessions?_method=DELETE" method="POST">
+              <button class="btn-small grey darken-1" type="submit" name="button"></button>
+            </form>
+          <% } %>
         </div>
         <div id="addButton" class="center-align">
           <a class="btn-flat waves-effect" href="/records/new"><i class="material-icons left">add_box</i>Add a Record</a>
