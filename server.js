@@ -36,6 +36,10 @@ app.use('/users', usersController);
 app.use('/sessions', sessionsController);
 app.use('/records', recordsController);
 
+app.get('/', (req, res) => {
+  res.redirect('/records');
+});
+
 app.listen(port, () => {
   console.log('listening on port', port);
 });
