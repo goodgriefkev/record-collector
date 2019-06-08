@@ -10,7 +10,9 @@ router.post('/', (req, res) => {
     {username: req.body.username},
     (err, foundUser) => {
       if(req.body.password == foundUser.password) {
-        res.send('signed in');
+        req.session.currentUser = foundUser;
+        res.redirect('/');
+        // res.send('signed in');
       } else {
         res.send('password incorrect');
       }
