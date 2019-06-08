@@ -4,23 +4,33 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <div class="">
-      <% include ./partials/header.ejs %>
-      <% include ./partials/nav.ejs %>
-      <div class="">
-        <h1>Add an Record</h1>
+    <div class="container">
+      <div class="header">
+        <% include ./partials/header.ejs %>
+        <% include ./partials/nav.ejs %>
       </div>
-      <div class="">
-        <form class="" action="/records" method="POST">
-          <input type="text" name="title" placeholder="Title"><br/>
-          <input type="text" name="artist" placeholder="Artist"><br/>
-          <input type="number" name="year" placeholder="Year"><br/>
-          <input type="text" name="format" placeholder="Format"><br/>
-          <input type="text" name="description" placeholder="Description"><br/>
-          <input type="text" name="img" placeholder="Link to cover art"><br/>
-          <br/>
-          <input type="submit">
-        </form>
+      <div class="row">
+        <div class="col s6 right-align">
+          <img src="https://image.flaticon.com/icons/png/512/13/13510.png" alt="image of empty cover art"/>
+        </div>
+        <div class="col s6 left-align">
+          <div class="">
+            <h5>Add a Record</h5>
+          </div>
+          <div class="divider"></div>
+          <div class="">
+            <form class="" action="/records" method="POST">
+              <input type="text" name="title" placeholder="Title"><br/>
+              <input type="text" name="artist" placeholder="Artist"><br/>
+              <input type="number" name="year" placeholder="Year"><br/>
+              <input type="text" name="format" placeholder="Format"><br/>
+              <input type="text" name="description" placeholder="Description"><br/>
+              <input type="text" name="img" placeholder="Link to cover art"><br/>
+              <br/>
+              <button class="btn-small grey darken-1" type="submit" name="button"><i class="material-icons left">add</i>ADD RECORD</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </body>
