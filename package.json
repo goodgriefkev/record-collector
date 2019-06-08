@@ -1,6 +1,9 @@
 {
   "name": "record-collector",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.11.0"
+  },
   "description": "SEIR Project Two",
   "main": "server.js",
   "scripts": {
