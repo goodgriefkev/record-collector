@@ -9,6 +9,6 @@ const recordSchema = new mongoose.Schema({
   img: String
 });
 
-const Record = mongoose.model('Record', recordSchema)
+const Record = mongoose.model('Record', recordSchema);
 
-module.exports = Record
+module.exports = Record;
