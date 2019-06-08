@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <% include ./partials/head.ejs %>
+    <% include ../partials/head.ejs %>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <% include ./partials/header.ejs %>
-        <a class="btn-flat waves-effect" href="/records"><i class="material-icons left">arrow_back</i>Back</a>
+        <% include ../partials/header.ejs %>
+        <div class="center-align">
+          <a class="btn-flat waves-effect" href="/records"><i class="material-icons left">arrow_back</i>Back</a>
+        </div>
       </div>
       <div class="row">
-        <div class="col s6 center-align">
+        <div class="col s4 left-align">
+        </div>
+        <div class="col s4 center-align">
           <div class="">
             <h5>Sign In</h5>
           </div>
@@ -20,6 +24,8 @@
             <input type="password" name="password" placeholder="password"/>
             <button class="btn-small grey darken-1" type="submit" name="button"><i class="material-icons left">account_box</i>SIGN IN</button>
           </form>
+        </div>
+        <div class="col s4 right-align">
         </div>
       </div>
     </div>

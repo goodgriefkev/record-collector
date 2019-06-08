@@ -24,6 +24,7 @@ app.use(session ({
   resave: false,
   saveUninitialized: false
 }));
+app.use('/users', usersController);
 app.use('/sessions', sessionsController);
 app.use('/records', recordsController);
 
