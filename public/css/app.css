@@ -18,22 +18,13 @@ img {
   /* margin-bottom: 10px; */
 }
 
-/* @media (min-width: 992px) {
-
+#backButton {
+  margin-top: -20px;
 }
 
-@media (min-width: 600px) {
-
-} */
-
-/* @media (max-width: 600px) {
-  h1 {
-    font-size: 34px;
-  }
-  .card {
-    height: 410px;
-  }
-} */
+li {
+  font-size: 22px;
+}
 
 @media (max-width: 1400px) {
   #addButton {
