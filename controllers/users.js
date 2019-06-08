@@ -9,7 +9,13 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
   User.create(req.body, (err, createdUser) => {
-    res.redirect('/');
+    if (err) {
+      res.send('Account not created');
+    } else {
+      // console.log(createdUser);
+      // res.send(createdUser);
+      res.render('sessions/new.ejs');
+    }
   })
 });
 
