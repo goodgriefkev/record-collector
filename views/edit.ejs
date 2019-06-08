@@ -4,55 +4,66 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <div class="">
-      <% include ./partials/header.ejs %>
-      <% include ./partials/nav.ejs %>
-      <div class="">
-        <img src="<%=record.img%>" alt="image of <%=record.artist%>'s <i><%=record.title%></i>"
-      </div>
-      <div class="">
-        Edit <%=record.title%>
-      </div>
-      <div class="">
-        <form class="" action="/records/<%=record.id%>?_method=PUT" method="POST">
-          <input
-            type="text"
-            name="title"
-            placeholder="Title"
-            value="<%=record.title%>"/>
-            <br/>
-          <input
-            type="text"
-            name="artist"
-            placeholder="Artist"
-            value="<%=record.artist%>"/>
-            <br/>
-          <input
-            type="number"
-            name="year"
-            placeholder="Year"
-            value="<%=record.year%>"/>
-            <br/>
-          <input
-            type="text"
-            name="format"
-            placeholder="Format"
-            value="<%=record.format%>"/>
-            <br/>
-          <input
-            type="textarea"
-            name="description"
-            placeholder="Description"
-            value="<%=record.description%>"/>
-            <br/>
-          <input
-            type="text"
-            name="img"
-            placeholder="Link to cover art"
-            value="<%=record.img%>"/>
-            <br/>
+    <div class="container">
+      <div class"header">
+        <% include ./partials/header.ejs %>
+        <div class="backButton center-align">
+          <a class="btn-flat waves-effect" href="/records/<%=record.id%>"><i class="material-icons left">arrow_back</i>Back to Record</a>
           <br/>
-          <input type="submit">
+          <br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 right-align">
+          <img src="<%=record.img%>" alt="image of <%=record.artist%>'s <i><%=record.title%></i>"/>
+        </div>
+        <div class="col s6 left-align">
+          <div class="">
+            <h5>Edit</h5>
+          </div>
+          <div class="divider"></div>
+          <div class="">
+            <form class="" action="/records/<%=record.id%>?_method=PUT" method="POST">
+              <input
+                type="text"
+                name="title"
+                placeholder="Title"
+                value="<%=record.title%>"/>
+                <br/>
+              <input
+                type="text"
+                name="artist"
+                placeholder="Artist"
+                value="<%=record.artist%>"/>
+                <br/>
+              <input
+                type="number"
+                name="year"
+                placeholder="Year"
+                value="<%=record.year%>"/>
+                <br/>
+              <input
+                type="text"
+                name="format"
+                placeholder="Format"
+                value="<%=record.format%>"/>
+                <br/>
+              <input
+                type="text"
+                name="description"
+                placeholder="Description"
+                value="<%=record.description%>"/>
+                <br/>
+              <input
+                type="text"
+                name="img"
+                placeholder="Link to cover art"
+                value="<%=record.img%>"/>
+                <br/>
+              <br/>
+              <input type="submit">
+          </div>
+        </div>
       </div>
     </div>
   </body>
